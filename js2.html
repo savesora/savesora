@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        scorl
+    </h1>
+    <input id="scorl" type="text">
+    <br><br>
+    <button onclick="check()">check</button>
+    
+    
+    <p id="resuse">
+
+    </p>
+
+    <script>
+         const input=document.getElementById("scorl");
+         const button=document.getElementById("check");
+         const result=document.getElementById("resuse");
+         function check(){
+
+             let scrol=input.value;
+             console.log(scrol);
+             if(scrol>50){
+                result.innerHTML="pass";
+                result.style.color="green";
+                result.style.fontSize="50px";
+                
+             }
+             else{
+                 result.innerHTML="not pass";
+                 result.style.color="red";
+                 result.style.fontSize="50px";
+             }
+         }
+    </script>
+</body>
+
+
+</html>

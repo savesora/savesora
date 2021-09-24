@@ -16,7 +16,13 @@ body {
 button {
     background-color: yellow;
 }
+<<<<<<< HEAD:style.css
 
 .myclass{
     color: green;
 }
+=======
+.myclass{
+    color: red;
+}
+>>>>>>> 592aacfcb6a336f91acf2a0f379e9357c4f8aac7:css/style.css
