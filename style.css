@@ -16,3 +16,7 @@ body {
 button {
     background-color: yellow;
 }
+
+.myclass{
+    color: green;
+}
