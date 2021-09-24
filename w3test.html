@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <link rel="stylesheet" href="css/copcss.css">
+    
+    <style>
+        
+      .flexrow {
+        display: flex;
+        flex-direction: row;
+      }
+      .flexcol {
+        display: flex;
+        flex-direction: column;
+      }
+      .flex-center {
+        justify-content: center;
+      }
+      .flex-center:hover {
+        background-color: honeydew;
+      }
+      .flex-left-panel {
+        flex-grow: 1;
+        background-color: grey;
+      }
+      .flex-right-panel {
+        flex-grow: 20;
+        background-color: rgb(168, 161, 161);
+      }
+      .hamberger-icon:hover {
+        cursor: pointer;
+      }
+      .pointer {
+        cursor: pointer;
+      }
+      .ham .item {
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 6px 0;
+      }
+      .zero-padding-margin {
+        padding: 0px;
+        margin: 0px;
+      }
+      .suggestion-chip {
+        border-radius: 20px;
+        border: 1px solid black;
+        color: honeydew;
+        background-color: rgb(90, 87, 87);
+        padding: 0px;
+        margin: 0px;
+        height: 25px;
+      }
+      .suggestion-chip p {
+        padding: 0px 5px 0px 5px;
+        margin: 0px;
+      }
+      .space {
+        margin-right: 15px;
+      }
+      .myborder{
+          border: 1px solid black;
+      }
+      .leftbar{
+          flex-grow: 3;
+          background-color: white;
+          margin: 5px;
+          box-shadow: 0px 0px 10px rgb(124, 124, 124);
+      }
+      .rightbar{
+          flex-grow: 7;
+          
+          margin: 0px;
+      }
+      .mainpad{
+          padding-left: 25%;
+          padding-right: 25%;
+      }
+      .submar{
+          margin: 5px;
+          background-color: white;
+      }
+      .design {
+padding-left: 0.7em;
+      }
+body{
+    background-color: rgb(235, 235, 235);
+}
+.auto {cursor: auto;}
+      
+      
+    </style>
+   
+  </head>
+  <body>
+    <div>
+      <div class="flexrow mainpad ">
+        <div class="flexcol leftbar">
+          <div class="w3-display-container">
+            <!-- <img src="avatar_hat.jpg" style="width: 65%" alt="Avatar" /> -->
+            <div class="w3-display-bottomleft w3-container w3-text-black">
+              <h2>Jane Doe</h2>
+            </div>
+          </div>
+
+          <div class="design">
+            <p><i class="fa fa-cube" aria-hidden="true"></i>&nbsp;&nbsp;design</p>
+            <p><i class="fa fa-cube" aria-hidden="true"></i>&nbsp;&nbsp;london</p>
+            <p><i class="fa fa-cube" aria-hidden="true"></i>&nbsp;&nbsp;save@gmail.com</p>
+            <p><i class="fa fa-cube" aria-hidden="true"></i>&nbsp;&nbsp;1234567</p>
+          </div>
+          <hr />
+
+          <div class="design">
+            <h1><i class="fa fa-cube" aria-hidden="true"></i>&nbsp;skill</h1>
+            <p><i class="fa fa-cube" aria-hidden="true"></i>&nbsp;adobe photoshop</p>
+            
+                <div class="w3-container w3-blue w3-round-xlarge" style="width:90%">90%</div>
+            
+            <p><i class="fa fa-cube" aria-hidden="true"></i>&nbsp;photography</p>
+            <div class="w3-container w3-blue w3-round-xlarge" style="width:90%">80%</div>
+            <p><i class="fa fa-cube" aria-hidden="true"></i>&nbsp;lllustrator</p>
+            <div class="w3-container w3-blue w3-round-xlarge" style="width:90%">75%</div>
+            <p><i class="fa fa-cube" aria-hidden="true"></i>&nbsp;Media</p>
+            <div class="w3-container w3-blue w3-round-xlarge" style="width:90%">50%</div>
+          </div>
+
+          <div class="design">
+            <h1><i class="fa fa-cube" aria-hidden="true"></i>&nbsp;language</h1>
+            <p><i class="fa fa-cube" aria-hidden="true"></i>&nbsp;english</p>
+            <div class="w3-container w3-blue w3-round-xlarge" style="width:90%">&nbsp;</div>
+            <p><i class="fa fa-cube" aria-hidden="true"></i>&nbsp;spanish</p>
+            <div class="w3-container w3-blue w3-round-xlarge" style="width:90%">&nbsp;</div>
+            <p><i class="fa fa-cube" aria-hidden="true"></i>&nbsp;german</p>
+            <div class="w3-container w3-blue w3-round-xlarge" style="width:90%">&nbsp;</div>
+            
+          </div>
+        </div>
+        <div class="flexcol rightbar">
+          <div class="flexrow myborder submar">
+            <div class="flexcol auto">
+                <h1 class="design">
+                  <i class="fa fa-cube" aria-hidden="true"></i> Work Experience
+                </h1>
+                <div>
+                    <p class="design">
+                        Front End Developer / w3schools.com
+                    </p>
+                    <p class="design">
+                        Sep 2021-current
+                    </p>
+                    <p class="design">เรียนเขียนโปรแกรม</p>
+                </div>
+                <hr>
+                <div>
+                    <p class="design">
+                        Web Developer / save.com
+                    </p>
+                    <p class="design">
+                        Oct 2021-Dec 2021
+                    </p>
+                    <p class="design">ทำงานหนัก</p>
+                </div>
+                <hr>
+                <div class="design">
+                    <p>
+                        Graphic Designer
+                    </p>
+                    <p>
+                        Dec 2021-Present Day
+                    </p>
+                    <p>ตั้งใจทำงาน</p>
+                </div>
+                
+            </div>
+            
+
+          </div>
+          <div class="flexrow myborder submar">
+            <div class="flexcol">
+                <h1 class="design">
+                  <i class="fa fa-cube" aria-hidden="true"></i>&nbsp;Education
+                </h1>
+                <div class="design">
+                    <p>
+                        สงกรานต์ School
+                    </p>
+                    <p>
+                        Forever
+                    </p>
+                    <p>Web Developer</p>
+                </div>
+                <hr>
+                <div class="design">
+                    <p>
+                        Thailand Business
+                    </p>
+                    <p>
+                        2020-2021
+                    </p>
+                    <p>Master Degree</p>
+                </div>
+                <hr>
+                <div class="design">
+                    <p>
+                        School of Coding
+                    </p>
+                    <p>
+                        2020-2021
+                    </p>
+                    <p>Bachelor Degree</p>
+                </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

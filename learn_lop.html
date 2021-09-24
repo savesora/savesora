@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="first">
+      <button onClick="pu();">ตกลง</button>
+    </p>
+  </body>
+  <script>
+    function pu() {
+      for (let i = 1; i < 100; i++) {
+        let hii = "Hi" + i;
+        
+        let box1 = document.getElementById(hii);
+
+       let box1_value = box1.value;
+       
+       Number(box1_value);
+       let box1_number = Number(box1_value);
+       
+       if (box1_number < 50){
+           box1.style.backgroundColor ="white";
+
+       }
+       else {
+           box1.style.backgroundColor = "green";
+       }
+       }
+      }
+
+     
+    
+
+    const first = document.getElementById("first");
+
+    for (let i = 1; i < 100; i++) {
+      let mydiv = document.createElement("mydiv");
+      document.createTextNode("Hello World");
+      mydiv.innerHTML = i + " &nbsp&nbsp;";
+      document.body.appendChild(mydiv);
+
+      let box = document.createElement("INPUT");
+      box.setAttribute("type", "box1");
+      box.setAttribute("id", "Hi" + i);
+      document.body.appendChild(box);
+      let br = document.createElement("br");
+      document.body.appendChild(br);
+    }
+  </script>
+</html>

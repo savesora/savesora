@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .tall{
+            width:10%;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div class="tall">
+    <p>
+        num1
+    </p>
+    
+    <div class="input-group input-group-sm mb-3">
+        
+        <input id="save1" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+      </div>
+      
+    <br>
+    <p>
+        num2
+    </p>
+    
+    
+    <div class="input-group input-group-sm mb-3">
+        
+        <input id="save2" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+      </div>
+    <br><br>
+
+    <button class="btn btn-success" onclick="plus()">plus</button>
+    <button onclick="minus()">minus</button>
+    <button onclick="multiple()">multiple</button>
+    <br>
+    <p id="save3">
+        result
+    </p>
+
+</div>
+</center>
+
+    <script>
+const save1=document.getElementById('save1');
+const save2=document.getElementById('save2');
+const save3=document.getElementById('save3');
+
+function plus(){
+    console.log('hello');
+    var num1_string = save1.value;
+    
+    var num2_string = save2.value;
+    let num1_num=Number(num1_string);
+    let num2_num=Number(num2_string);
+    let answwer=num1_num+num2_num;
+    console.log(num1_string+num2_string);
+    save3.innerHTML=num1_string+' + '+num2_string+' = '+answwer;
+    
+}
+function minus(){
+    console.log('hello');
+    var num1_string = save1.value;
+    
+    var num2_string = save2.value;
+    let num1_num=Number(num1_string);
+    let num2_num=Number(num2_string);
+    let answwer=num1_num-num2_num;
+    console.log(num1_string-num2_string);
+    save3.innerHTML=num1_string+' - '+num2_string+' = '+answwer;
+}
+function multiple(){
+    console.log('hello');
+    var num1_string = save1.value;
+    
+    var num2_string = save2.value;
+    let num1_num=Number(num1_string);
+    let num2_num=Number(num2_string);
+    let answwer=num1_num*num2_num;
+    console.log(num1_string*num2_string);
+    save3.innerHTML=num1_string+' x '+num2_string+' = '+answwer;
+}
+
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

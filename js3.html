@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Number
+    </h1>
+    <input id="pass" type="text">
+    
+    <br><br>
+    <button onclick="enter()">ตกลง</button>
+    <p id="pas">
+
+    </p>
+
+    <script>
+        const input=document.getElementById("pass");
+        const button=document.getElementById("ตกลง");
+        const p=document.getElementById("pas");
+        function enter(){
+            let pass=input.value;
+            console.log(pass);
+            if (pass>50){
+                
+                 p.innerHTML="Pass";
+                
+            }
+            else{
+                p.innerHTML="Not";
+            }
+
+
+            
+
+            
+
+
+        }
+
+        
+
+    </script>
+
+</body>
+</html>

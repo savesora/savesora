@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+
+  <body>
+    <h1>Number</h1>
+    <input id="in1" type="text" />
+    <input id="in2" type="text" />
+    <input id="in3" type="text" />
+    <input id="in4" type="text" />
+    <input id="in5" type="text" />
+    <br /><br />
+    <button style="background-color: chartreuse" onClick="me()">ตกลง</button>
+    <button style="background-color: cyan" onClick="you()">clear</button>
+
+    <script>
+      const input1 = document.getElementById("in1");
+      const input2 = document.getElementById("in2");
+      const input3 = document.getElementById("in3");
+      const input4 = document.getElementById("in4");
+      const input5 = document.getElementById("in5");
+      const button = document.getElementById("me");
+      const button2 = document.getElementById("clear");
+
+      function me() {
+        let input_1 = input1.value;
+        input_1 = Number(input_1);
+
+        let input_2 = input2.value;
+        input_2 = Number(input_2);
+
+        let input_3 = input3.value;
+        input_3 = Number(input_3);
+
+        let input_4 = input4.value;
+        input_4 = Number(input_4);
+
+        let input_5 = input5.value;
+        input_5 = Number(input_5);
+
+        if (input_1 > 50) {
+          input1.style.backgroundColor = "green";
+        } else {
+          input1.style.backgroundColor = "white";
+        }
+
+        if (input_2 > 50) {
+          input2.style.backgroundColor = "green";
+        } else {
+          input2.style.backgroundColor = "white";
+        }
+        if (input_3 > 50) {
+          input3.style.backgroundColor = "green";
+        } else {
+          input3.style.backgroundColor = "white";
+        }
+        if (input_4 > 50) {
+          input4.style.backgroundColor = "green";
+        } else {
+          input4.style.backgroundColor = "white";
+        }
+        if (input_5 > 50) {
+          input5.style.backgroundColor = "green";
+        } else {
+          input5.style.backgroundColor = "white";
+        }
+      }
+    function you () {
+        console.log("hi");
+        
+        input1.value="";
+        input2.value="";
+        input3.value="";
+        input4.value="";
+        input5.value="";
+        input1.style.backgroundColor = "white";
+        input2.style.backgroundColor = "white";
+        input3.style.backgroundColor = "white";
+        input4.style.backgroundColor = "white";
+        input5.style.backgroundColor = "white";
+
+    }
+    </script>
+  </body>
+</html>
