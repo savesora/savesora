@@ -7,14 +7,62 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>
+        To do list
+    </h1>
     <p>
-
-    </p>
-
-    <script>
+        <input id="word" type="text">
+        <button id="btn">add</button>
         
-        const fruits =["Apple,","mango","banana"];
-        console.log(fruits);
+        <ul id="ul"> mylist
+            
+        </ul>
+    </p>
+    <script>
+        const word =document.getElementById("word");
+        const btn = document.getElementById("btn");
+        const ul = document.getElementById("ul");
+        btn.addEventListener("click",add);
+        let list =[];
+        function add(){
+            let text = word.value;
+           
+            
+            if(text !=""){
+                list.push(text);
+            }
+           
+            word.value = "";
+            console.log(list);
+            var index;
+            clearulandaddli();
+            function clearulandaddli(){
+                ul.innerHTML ="";
+                for(let i =0;i<list.length;i++){
+                     index = i;
+                let li = document.createElement("li");
+                li.innerHTML = list[i];
+                let del_btn=document.createElement("button");
+                del_btn.innerHTML = "delete";
+                del_btn.style.backgroundColor="red";
+                del_btn.addEventListener("click",del_li);
+                li.appendChild(del_btn);
+
+                ul.appendChild(li);
+            }
+
+            }
+            function del_li(){
+                list.splice(index,1);
+                    console.log(list);
+                    clearulandaddli(); 
+            }
+
+            
+
+            
+        }
+
     </script>
 </body>
 </html>
