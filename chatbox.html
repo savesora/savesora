@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      p {
+        margin: 0px;
+        padding: 2px;
+      }
+
+      #box1 {
+        background-color: red;
+        height: 80vh;
+        padding-left: 0px;
+        flex-direction: column-reverse;
+      }
+      .flexrow {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: rgb(31, 31, 31);
+        align-self: flex-end;
+        align-items: flex-end;
+        height: 100%;
+      }
+      .container-fluid {
+        padding: 5%;
+        padding-bottom: 0%;
+      }
+      #box {
+        padding-right: 0px;
+        width: 100%;
+      }
+      .flexrow2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+      .chat {
+        background-color: rgb(211, 212, 99);
+        border: 0px solid rgb(175, 224, 39);
+        border-radius: 20px;
+        padding: 2px;
+
+        margin: 3px;
+      }
+      .flexcolum {
+        display: flex;
+        overflow-y: scroll;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+      
+      
+    <div class="container-fluid">
+      <div id="box1" class="col-12">
+        <div class="flexrow">
+          <div id="flexcolum" class="flexcolum">
+            <div class="flexrow2">
+              <div class="chat">
+                <p>55555555555555</p>
+              </div>
+            </div>
+            <div class="flexrow2">
+              <div class="chat">
+                <p>5555555</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flexrow2">
+        <input id="box" type="text" />
+        <button id="sent" class="btn btn-danger" onclick="send()">send</button>
+      </div>
+    </div>
+
+    <script>
+      const box = document.getElementById("box");
+
+      function send() {
+        let text = box.value;
+        let flexrow2 = document.createElement("div");
+        flexrow2.className="flexrow2";
+        let chat = document.createElement("div");
+        chat.classList.add("chat");
+        let p = document.createElement("p");
+        p.innerHTML = text;
+        chat.appendChild(p);
+        flexrow2.appendChild(chat);
+
+        let flexcolun = document.getElementById("flexcolum");
+        flexcolun.appendChild(flexrow2);
+
+        box.value = "";
+      }
+      document.addEventListener("keydown", enter);
+      function enter(event) {
+        if (event.key == "Enter") {
+          send();
+        }
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
