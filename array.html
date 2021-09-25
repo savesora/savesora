@@ -16,21 +16,60 @@
     </style>
 </head>
 <body>
-    <h1 id = "my_p">
-
+    <h1>
+        To do list
     </h1>
-    <h1 id="hello">
-
-    </h1>
-    <button>click me</button>
-
-    <script>
-        const my_p = document.getElementById("my_p");
+    <p>
+        <input id="word" type="text">
+        <button id="btn">add</button>
         
-        const fruits = ["Apple","mango","banana"];
-        for (let i =0;i < 3; i++){
-            my_p.innerHTML += fruits[i];
-            my_p.innerHTML += "<br>";
+        <ul id="ul"> mylist
+            
+        </ul>
+    </p>
+    <script>
+        const word =document.getElementById("word");
+        const btn = document.getElementById("btn");
+        const ul = document.getElementById("ul");
+        btn.addEventListener("click",add);
+        let list =[];
+        function add(){
+            let text = word.value;
+           
+            
+            if(text !=""){
+                list.push(text);
+            }
+           
+            word.value = "";
+            console.log(list);
+            var index;
+            clearulandaddli();
+            function clearulandaddli(){
+                ul.innerHTML ="";
+                for(let i =0;i<list.length;i++){
+                     index = i;
+                let li = document.createElement("li");
+                li.innerHTML = list[i];
+                let del_btn=document.createElement("button");
+                del_btn.innerHTML = "delete";
+                del_btn.style.backgroundColor="red";
+                del_btn.addEventListener("click",del_li);
+                li.appendChild(del_btn);
+
+                ul.appendChild(li);
+            }
+
+            }
+            function del_li(){
+                list.splice(index,1);
+                    console.log(list);
+                    clearulandaddli(); 
+            }
+
+            
+
+            
         }
 
     </script>

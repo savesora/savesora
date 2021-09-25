@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #my_p {
+        font-size: 100px;
+      }
+    </style>
+    
+  </head>
+  <body>
+    
+    <p id="hello"></p>
+    <button id="my_button">click</button>
+    <img id="my_p" src="my_image/download.jpg" alt="">
+
+    <script>
+      const my_p = document.getElementById("my_p");
+      console.log(my_p);
+      const hello = document.getElementById("hello");
+      const my_button = document.getElementById("my_button");
+      document.addEventListener("keydown", rename);
+        let pl=0;
+        let pt=0;
+      function rename(event) {
+        console.log(event);
+        if (event.key == "ArrowRight") {
+        //   if (my_button.innerHTML == "click") {
+        //     my_button.innerHTML = "click_me";
+        //   } else {
+        //     my_button.innerHTML = "click";
+
+        //   }  
+        pl += 20;
+        my_p.style.paddingLeft = pl+"px";
+        }
+         if(event.key == "ArrowLeft"){
+            pl -=20;
+            my_p.style.paddingLeft = pl+"px";
+        }
+        if (event.key == "ArrowUp"){
+            pt -=20;
+            my_p.style.paddingTop = pt+"px";
+
+        }
+        if (event.key == "ArrowDown"){
+            pt+=20;
+            my_p.style.paddingTop = pt+"px";
+        }
+      }
+
+      const helo = ["hello"];
+      hello.innerHTML = helo[0];
+      console.log(helo);
+
+      const fruits = ["orange", "mango", "banana"];
+      for (i = 0; i < 3; i++) {
+        my_p.innerHTML += fruits[i];
+        my_p.innerHTML += "<br>";
+      }
+    </script>
+  </body>
+</html>
