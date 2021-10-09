@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Times
+    </div>
+    <div>
+        <input id="time" type="number"><button id="push"onclick="run()">RUN</button>
+    </div>
+    <div id="show">
+
+    </div>
+    
+
+    <script>
+        const time = document.getElementById("time");
+        const show = document.getElementById("show");
+        
+
+        
+        function run(){
+            let time_value = time.value; 
+            let time_int = parseInt(time_value);
+            show.innerHTML = "";
+            let text = "";
+
+            
+
+            for (let i = 1;i<=time_int;i++){
+                
+                text += i +"<br>";
+                
+                
+            }
+            
+            show.innerHTML = text;
+        }
+        
+        
+    </script>
+</body>
+</html>

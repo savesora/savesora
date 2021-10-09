@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <style>
+       
+        .container-fluid{
+            
+            padding: 0%;
+        }
+        .flexrow{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: chartreuse;
+            justify-content: space-between;
+            
+        }
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        .transparent{
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.space{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.position{
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 28px;
+}
+.center{
+    display: flex;
+    
+}
+.back{
+    background-color: rgb(0, 218, 218);
+    width: 150px;
+
+}
+.pointer {
+    cursor: pointer;
+}
+.pad{
+    display: none;
+    padding-left: 10px;
+ 
+}
+
+ 
+
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="flexrow">
+            <div>
+                Hello
+            </div>
+            
+            <div class="space">
+                <button>Sign in</button>
+                <button id="push" class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                    <svg  width="20" height="20" viewBox="0 0 100 100">
+                      <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                      <path class="line line2" d="M 20,50 H 80" />
+                      <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                    </svg>
+                </button>
+            </div>
+            
+        </div>
+        <!-- box -->
+        <div id="menu" class="back position">
+            <div>
+                Course Catalog 
+            </div>
+            <div>
+                 Projects 
+            </div>
+            <div>
+                 Help and support 
+            </div>
+            <div>
+                 Report a problem 
+            </div>
+            <div class="center">
+                 Teach <svg id="point" class="pointer" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                  </svg>
+            </div>
+            <div id="pad" class="pad">
+                <div>
+                    Course Catalog 
+                </div>
+                <div>
+                    Projects 
+                </div>
+                <div>
+                    Help and support 
+                </div>
+                <div>
+                    Report a problem 
+                </div>
+                
+            </div>
+            <div>
+                Stats
+            </div>
+        </div>
+        
+                
+    </div>
+    <script>
+        const point = document.getElementById("point");
+        const pad = document.getElementById("pad");
+        const menu = document.getElementById("menu");
+        const push = document.getElementById("push");
+         
+       
+
+        
+        push.addEventListener("click",function(){
+            
+            if(menu.style.display ==""||menu.style.display=="none"){
+                
+                menu.style.display = "block";
+                
+                
+                
+
+            }
+            else{
+                
+                menu.style.display = "none";
+                
+            }
+
+        });
+         point.addEventListener("click",function() {
+             if (pad.style.display == "" || pad.style.display =="none") {
+                 
+              pad.style.display = "block"; 
+             }
+             else{
+                pad.style.display = "none";
+             }
+         });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

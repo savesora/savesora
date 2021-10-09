@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Hello world
+    </div>
+    <p id="name">
+        
+    </p>
+    <div>
+        <button id="push" >click</button>
+    </div>
+
+    <script>
+        const push = document.getElementById("push");
+        const name = document.getElementById("name");
+        class User {
+            constructor(name,age){
+                this.name=name
+                this.age=age
+            }
+            
+
+            sayhi(){
+                name.innerHTML += "Id = "+this.name+this.age +"<br>";
+                console.log(name);
+                console.log(this.name,this.age);
+                console.log(name.innerHTML);
+            }
+        }
+
+        
+
+        var user1=new User("savesora",1);
+        user1.sayhi();
+         
+        user1.sayhi();
+
+    </script>
+    
+</body>
+</html>

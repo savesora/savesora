@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="name">
+
+    </p>
+    <div>
+        <input id="input_number" type="text">
+    </div>
+    <br>
+    <div>
+        <button id="push_btn">push</button>
+        <button id="clear_btn">clear</button>
+    </div>
+
+    <script>
+        const name = document.getElementById("name");
+        const input_number = document.getElementById("input_number");
+        const push_btn = document.getElementById("push_btn");
+        const clear_btn = document.getElementById("clear_btn");
+
+        push_btn.addEventListener("click",function(){
+           
+            
+            let number = input_number.value;
+                let num = parseInt(number);
+                let num_ber = 1;
+
+                
+                name.innerHTML ="";
+
+             
+            
+            
+            for(let i = 1;i<12;i++){
+                num_ber += 1;
+            name.innerHTML += num +"x"+(num_ber)+"="+(num*num_ber)+"<br>";
+            
+            }
+            
+            
+            
+            
+        });
+
+        
+    </script>
+</body>
+</html>

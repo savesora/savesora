@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn-active{
+            background-color: red;
+            color: black;
+        }
+        .btn-inactive{
+            background-color: grey;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Time</h1>
+
+
+<div id="time">
+    00.00
+</div>
+<br>
+<div>
+    <button id="start" >Start</button>
+    <button id="pause" >Pause</button>
+    <button id="clear" >Clear</button>
+</div>
+
+<script>
+    const time = document.getElementById("time");
+    const start = document.getElementById("start");
+    const pause = document.getElementById("pause");
+    const clear = document.getElementById("clear");
+    var running;
+    setactive(start);
+    setinactive(pause);
+    setinactive(clear);
+    
+    let time_obj = new Date(2000,1,1,0,0,0,0);
+    let status = "stop";
+    console.log(time_obj);
+    start.addEventListener("click",()=>{
+        if(status == "stop"){
+            status = "running";
+            
+            setinactive(start);
+            setactive(pause);
+            setactive(clear);
+
+
+             running = setInterval(function(){
+                let sec = time_obj.getTime();
+                sec += 1000;
+                time_obj.setTime(sec);
+                
+                let minute = time_obj.getMinutes();
+                let second = time_obj.getSeconds();
+                second = String(second).padStart(2,"0");
+                minute = String(minute).padStart(2,"0");
+                time.innerHTML = minute+":"+second; 
+                
+
+            },1000);
+
+        }
+        
+    });
+    pause.addEventListener("click",()=>{
+        if(status =="running"){
+            status = "stop";
+            setactive(start);
+            setactive(clear);
+            setinactive(pause);
+            clearInterval(running);
+        }
+    });
+    
+    clear.addEventListener("click",()=>{
+        status = "stop";
+        setactive(start);
+        setinactive(pause);
+        clearInterval(running);
+        time_obj = new Date(2000,1,1,0,0,0,0);
+        let minute = time_obj.getMinutes();
+        let second = time_obj.getSeconds();
+        second = String(second).padStart(2,"0");
+        minute = String(minute).padStart(2,"0");
+        time.innerHTML = minute+":"+second; 
+
+
+    });
+    
+    function setactive(btn){
+        btn.disabled = false;
+        btn.className = "btn-active";
+    }
+    function setinactive(btn){
+        btn.disabled = true;
+        btn.className = "btn-inactive";
+    }
+    
+
+</script>
+</body>
+</html>

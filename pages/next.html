@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <style>
+      .flexrow {
+        display: flex;
+        flex-direction: row;
+        
+        justify-content: center;
+      }
+      p {
+        background-color: black;
+        margin: 0%;
+      }
+      body {
+        margin: 0%;
+      }
+      .flexcolumn {
+        display: flex;
+        flex-direction: column;
+      }
+      .head {
+        align-items: center;
+        padding: 5px;
+        color: white;
+        justify-content: space-between;
+        font-size: 14px;
+        background-color: black;
+      }
+      .container-fluid {
+        padding: 0%;
+      }
+      .container {
+        justify-content: space-between;
+      }
+      .flexrow2 {
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        align-items: center;
+        color: grey;
+      }
+      .flexrow2 a:hover{
+        color: black;
+      }
+      .pad {
+        padding-left: 13px;
+      }
+      .button {
+        padding-bottom: 3px;
+        padding-top: 3px;
+        padding-right: 3px;
+        padding-left: 3px;
+      }
+      a {
+        color: grey;
+        text-decoration: none;
+      }
+      .flexrow3 {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+      }
+      .flexrow3 a {
+        color: black;
+      }
+      .flexrow3 .text a {
+        border: 1px solid rgb(148, 147, 147);
+        border-radius: 5px;
+        padding: 10px;
+
+        font-size: 8px;
+      }
+      .flexrow4{
+          display: flex;
+          justify-content: center;
+      }
+      .big{
+          font-size: 2.5em;
+          justify-content: center;
+          align-items: center;
+          font-weight: bold;
+          text-align: center;
+      }
+      .flexrow5{
+          display: flex;
+          justify-content: center;
+      }
+      .text2{
+          color: grey;
+          font-size: 8px;
+          text-align: center;
+          margin: 10px;
+
+      }
+      .flexrow6{
+          display: flex;
+          justify-content: center;
+          margin-top: 25px;
+      }
+      .flexrow6 .btn-primary{
+          margin-right: 15px;
+          box-shadow: 2px 2px 6px rgba(126, 225, 255, 0.911);
+      }
+      .flexrow6 .btn{
+          font-size: 0.7em;
+          padding-left: 30px;
+          padding-right: 30px;
+
+      }
+      .flexrow6 .btn-light{
+        box-shadow: 2px 2px 3px rgba(223, 223, 223, 0.911);
+      }
+      .flexrow7{
+          display: flex;
+          justify-content: center;
+          margin-top: 35px;
+          font-size: 8px;
+      }
+      .flexrow7 .git{
+          padding: 5px;
+          color: blue;
+
+
+      }
+      .flexrow7 .git:hover{
+          background-color: rgba(219, 241, 255, 0.698);
+          border-radius: 5px;
+      }
+      .margintop{
+        margin-top: 50px;
+        font-size: 20px;
+      }
+      .font{
+          font-size: 8px;
+          color: grey;
+      }
+      .flexrow8{
+          display: flex;
+          justify-content: center;
+          margin-top: 10px;
+      }
+      .mycontainer{
+        flex-wrap: wrap;
+        display: flex;
+      }
+      .mybox{
+          width: 27%;
+          justify-content: center;
+          border: 1px solid rgba(153, 153, 153, 0.356);
+          border-radius: 5px;
+          margin: 10px;
+          padding: 7px;
+
+          
+      }
+      .mybox:hover{
+          box-shadow:2px 2px 6px rgb(192, 192, 192);
+      }
+      .mybox .head{
+          background-color: rgba(180, 180, 180, 0);
+          color: black;
+          font-weight: bold;
+          font-size: 10px;
+          padding: 0px;
+          padding-bottom: 5px;
+
+
+      }
+      .mybox .content{
+          font-size: 8px;
+          color: grey;
+
+      }
+      .mybox a{
+          font-size: 8px;
+          color: blue;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- head -->
+      <div class="flexrow head">
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-triangle-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M7.022 1.566a1.13 1.13 0 0 1 1.96 0l6.857 11.667c.457.778-.092 1.767-.98 1.767H1.144c-.889 0-1.437-.99-.98-1.767L7.022 1.566z"
+            />
+          </svg>
+          Vercel
+        </p>
+        <p>Deploy Next.js in second</p>
+      </div>
+      <!-- head2 -->
+      <div class="secound">
+        <div class="flexcolumn">
+          <div class="flexrow2">
+            <div>
+              <a href="#">Next</a>
+            </div>
+            <div class="pad">
+              <a href="#">Showcase</a>
+            </div>
+            <div class="pad">
+              <a href="#">Docs</a>
+            </div>
+            <div class="pad">
+              <a href="#">live</a>
+            </div>
+            <div class="pad">
+              <a href="#">Analytics</a>
+            </div>
+            <div class="pad">
+              <a href="#">Commerce</a>
+            </div>
+            <div class="pad">
+              <a href="#">enterprise</a>
+            </div>
+            <div class="pad button">
+              <button class="btn btn-primary">learn</button>
+            </div>
+            <div class="pad">
+              <a href="#">
+                
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-emoji-sunglasses"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M4.968 9.75a.5.5 0 1 0-.866.5A4.498 4.498 0 0 0 8 12.5a4.5 4.5 0 0 0 3.898-2.25.5.5 0 1 0-.866-.5A3.498 3.498 0 0 1 8 11.5a3.498 3.498 0 0 1-3.032-1.75zM7 5.116V5a1 1 0 0 0-1-1H3.28a1 1 0 0 0-.97 1.243l.311 1.242A2 2 0 0 0 4.561 8H5a2 2 0 0 0 1.994-1.839A2.99 2.99 0 0 1 8 6c.393 0 .74.064 1.006.161A2 2 0 0 0 11 8h.438a2 2 0 0 0 1.94-1.515l.311-1.242A1 1 0 0 0 12.72 4H10a1 1 0 0 0-1 1v.116A4.22 4.22 0 0 0 8 5c-.35 0-.69.04-1 .116z"
+                  />
+                  <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-1 0A7 7 0 1 0 1 8a7 7 0 0 0 14 0z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- head3 -->
+      <div class="three">
+        <div class="flexrow3">
+          <div class="text">
+            <a href="#">
+              Next.js Conf:Celevrate 5 years of Next.js at our Glober Community
+              Conference.Claim Ticket
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- head4 -->
+      <div class="four">
+          <div class="flexrow4">
+            <div class="big">
+                The React Framework <br> for Production
+            </div>
+          </div>
+      </div>
+
+      <!-- head5 -->
+      <div class="five">
+          <div class="flexrow5">
+              <div class="text2">
+                  Next.js gives you the developer with all the features you need for production:hybrid static & server <br> rendering, TypeScript support,smart bundling,route pre-fetching,and more.No config needed.
+              </div>
+
+          </div>
+      </div>
+
+
+      <!-- head6 -->
+      <div class="six">
+          <div class="flexrow6">
+            <button class="btn btn-primary">Start Learning</button>
+            <button class="btn btn-light">Documentation</button>          
+          
+          </div>
+          
+      </div>
+
+
+      <!-- head7 -->
+      <div class="flexrow7">
+          <div>
+              <a href="#">License: MIT</a>
+              <a class="git" href="#">GitHub</a>
+          </div>
+      </div>
+
+      <div class="flexrow big margintop">
+          
+              Why Next.js         
+               
+      </div>
+      <div class="flexrow font">
+        
+          The world's leading companies use and love Next.js 
+        
+    </div>
+    <div class="flexrow8 mycontainer">
+        <a href="#">
+            <div class="mybox">
+                <div class="head">
+                    Image Optimization
+                </div>
+                <div class="content">
+                    Image and Automatic Image Optimization with instant builds.
+                </div>
+                <a href="#">Documentation →</a>
+                
+            </div>
+        </a>
+        <a href="#">
+            <div class="mybox">
+                <div class="head">
+                    Image Optimization
+                </div>
+                <div class="content">
+                    Image and Automatic Image Optimization with instant builds.
+                </div>
+                <a href="#">Documentation →</a>
+                
+            </div>
+        </a>
+        <a href="#">
+            <div class="mybox">
+                <div class="head">
+                    Image Optimization
+                </div>
+                <div class="content">
+                    Image and Automatic Image Optimization with instant builds.
+                </div>
+                <a href="#">Documentation →</a>
+                
+            </div>
+        </a>
+        <a href="#">
+            <div class="mybox">
+                <div class="head">
+                    Image Optimization
+                </div>
+                <div class="content">
+                    Image and Automatic Image Optimization with instant builds.
+                </div>
+                <a href="#">Documentation →</a>
+                
+            </div>
+        </a>
+        <a href="#">
+            <div class="mybox">
+                <div class="head">
+                    Image Optimization
+                </div>
+                <div class="content">
+                    Image and Automatic Image Optimization with instant builds.
+                </div>
+                <a href="#">Documentation →</a>
+                
+            </div>
+        </a>
+        <a href="#">
+            <div class="mybox">
+                <div class="head">
+                    Image Optimization
+                </div>
+                <div class="content">
+                    Image and Automatic Image Optimization with instant builds.
+                </div>
+                <a href="#">Documentation →</a>
+                
+            </div>
+        </a>
+        
+        
+
+    </div>
+    <br><br><br>
+    </div>
+  </body>
+</html>

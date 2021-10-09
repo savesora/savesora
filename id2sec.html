@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="ide">
+        ID
+    </div>
+    <br><br>
+    <div>
+        <button id="start" onclick="push_start()">start</button>
+        <button id="puase" onclick="push_puase()">puase</button>
+        <button id="clear" onclick="push_clear()">clear</button>
+    </div>
+    <script>
+        
+        const ide = document.getElementById("ide");
+        const start = document.getElementById("start");
+        const puase = document.getElementById("puase");
+        const clear = document.getElementById("clear");
+        var running;
+        
+        
+        setactive(start);
+        setinactive(puase);
+        setinactive(clear);
+
+        
+        
+    
+        let num = 0;
+        let status = "stop";
+        
+
+
+        
+        function push_start(){
+            console.log("push_start");
+
+            if(status=="stop"){
+                status="running";
+                setinactive(start);
+                setactive(puase);
+                setactive(clear);
+                
+                
+                running = setInterval(()=>{
+                    
+                    if(num<=100){
+                        num+=1;
+                    
+                        ide.innerHTML="id"+num;
+
+                        
+                        
+                    
+                    }
+                    
+                    
+
+                },2000);
+                console.log("running=",running);
+
+
+            }
+           
+        }
+
+        function push_puase() {
+            if(status=="running"){
+                status="stop";
+                setactive(start);
+                setinactive(puase);
+                setactive(clear);
+                clearInterval(running);
+                
+                
+                
+            }
+
+        }
+
+        function push_clear() {
+            
+                status="stop";
+
+                setactive(start);
+                setactive(puase);
+                setactive(clear);
+                clearInterval(running);
+                ide.innerHTML = "ID";
+                num=0;
+                
+
+                
+                
+                
+            
+        }
+        
+            
+        
+
+        function setactive(btn){
+            btn.disabled = false;
+            btn.className = "btn-active";
+        }
+        function setinactive(btn){
+            btn.disabled = true;
+            btn.className = "btn-inactive";
+        }
+
+    </script>
+</body>
+</html>

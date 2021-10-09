@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+
+    </style>
+</head>
+<body>
+    <div class="java">
+        <div>
+        num <br>
+        <input id="num1" type="text">
+        </div>
+        <div>
+            num <br>
+            <input id="num2" type="text">
+        </div>
+        <div>
+            <button id="SUM" onclick="push()">SUM</button>
+        </div>
+       <div id="num3">
+
+       </div>
+
+
+    </div>
+    <script src="caculator.js"></script>
+    <script>
+        const num1 = document.getElementById("num1");
+        const num2 = document.getElementById("num2");
+        const num3 = document.getElementById("num3");
+        
+
+        function push(){
+            let num1_value = num1.value;
+            let num2_value = num2.value;
+            
+            let num1_int = parseInt(num1_value);
+            let num2_int = parseInt(num2_value);
+
+            let sum =num1_int+num2_int;
+            num3.innerHTML=num1_value+" + "+num2_value+" = "+sum ;
+            console.log(sum);
+            
+            
+            
+
+        }
+
+
+    </script>
+</body>
+</html>
