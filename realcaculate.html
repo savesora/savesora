@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .box{
+            width: 25%;
+            border: 5px solid rgb(200, 92, 4);
+            padding: 50px;
+            margin: 20px;
+        }
+        .container-fluid{
+            display: flex;
+            flex-direction: column;
+            
+            align-items: center;
+        }
+        .flexrow{
+            display: flex;
+            flex-direction: row;
+            
+        }
+        body button {
+            width: 30px;
+            height: 25px;
+        }
+        p {
+            display: flex;
+            padding-left: 100%;
+            
+
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <div class="container-fluid box">
+            <div class="flexrow">
+
+            
+            <p id="name">
+            
+            </p>
+            </div>
+
+            <div class="flexrow">
+                <div id="btn_ab" class="flexrow">
+                    <button id="one">1</button>
+                    <button id="two">2</button>
+                    <button id="three">3</button>
+                </div>
+                <div id="operator">
+                    <button>+</button>
+                </div>
+            </div>
+            <div class="flexrow">
+                <div id="btn_ab" class="flexrow">
+                    <button id="four">4</button>
+                    <button id="five">5</button>
+                    <button id="six">6</button>
+                </div>
+                <div id="operator">
+                    <button>-</button>
+                </div>
+            </div>
+            <div class="flexrow">
+                <div id="btn_ab" class="flexrow">
+                    <button id="seven">7</button>
+                    <button id="eight">8</button>
+                    <button id="nine">9</button>
+                </div>
+                <div id="operator">
+                    <button>*</button>
+                </div>
+            </div>
+            <div class="flexrow">
+                <div id="btn_ab" class="flexrow">
+                    <button id="dot">.</button>
+                    <button id="zero">0</button>
+                </div>
+                <div id="operator" class="flexrow">
+                    <button>=</button>
+                    <button>/</button>
+                </div>
+            </div>
+        </div>
+    </center>
+    <script>
+        // 
+        // ประกาศตัวแปร a และ b และ operator และ status
+        const btn_ab = document.getElementById("btn_ab");
+        const operator = document.getElementById("operator");
+        const name = document.getElementById("name");
+        const one = document.getElementById("one");
+        const two = document.getElementById("two");
+        const three = document.getElementById("three");
+        const four = document.getElementById("four");
+        const five = document.getElementById("five");
+        const six = document.getElementById("six");
+        const seven = document.getElementById("seven");
+        const eight = document.getElementById("eight");
+        const nine = document.getElementById("nine");
+        const zero = document.getElementById("zero");
+        const dot = document.getElementById("dot");
+
+        
+        var status = "wait_a";
+        // operator เท่ากับว่างเปล่า
+        
+        // ถ้ากดเครื่องหมาย แล้ว status เป็น wait a 
+            btn_ab.addEventListener("click",function(){
+                console.log("hi");
+                
+                
+                
+            
+
+                
+
+
+
+            })
+            // ตัวแปร a มีค่าเท่ากับค่า element p
+            // แปลงค่า a เป็น number
+            // operator จะมีค่าเท่ากับเครื่องหมายนั้น
+            // status เป็น wait b
+        // ถ้ากดเลข
+            // p.innerHTML += เลข
+        // ถ้ากดเลขเมื่อ operator ไม่เท่ากับช่องว่าง และ status เป็น wait b
+            //   
+            // เคลีย element p
+            // 
+            // เอาเลขที่กด ไปเติมใน p แล้วเปลี่ยน status เป็น wait =
+        // ถ้ากดเครื่องหมาย = สเตตัสเป็น wait =  
+            // b มีค่า = ตัวเลข ใน p 
+            // แปลง b เป็น number
+            
+            // a จะมีค่าเท่ากับ b operator a
+            // แสดงค่า new a ใน p
+            // status wait b
+            // operator เท่ากับช่องว่าง
+        // ถ้ากดทศนิยม
+            // ทศนิยมกดได้แค่ครั้งเดียว
+            // หลังจากนั้น disable ปุ่ม ทศนิยม
+            // จะกดได้อีกครั้งหลังจากกดเครื่องหมาย operator
+            // loop บรรทัด 102-104
+            // แปลงค่าทศนิยมเป็น number
+
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
